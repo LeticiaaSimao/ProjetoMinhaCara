@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    position: relative; /* Garante que o conteúdo do body sobreponha a imagem */
+}
+
+.background-image {
+    position: fixed; /* Fixa a imagem de fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2024/03/DALL%C2%B7E-2024-03-28-18.31.42-A-wide-panoramic-image-showcasing-different-animals-spread-across-a-stylized-map-of-the-globe.-In-North-America-a-bald-eagle-soars-above-a-forest.-In.webp');
+    background-size: cover; /* Faz a imagem cobrir todo o espaço */
+    background-position: center center; /* Alinha a imagem ao centro */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+    opacity: 0.7; /* Aplica um efeito de transparência */
+    filter: brightness(60%); /* Diminui o brilho da imagem para escurecê-la */
+}
+header {
+    background-color: #2e7d32; /* Verde mais forte para o fundo do header */
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.slogan {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+nav {
+    background-color: #006f32; /* Verde escuro para o menu */
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+/* Seção de Categorias de Animais (Agora com 2 seções de 3 quadrados) */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border: 3px solid #00b359; /* Borda verde para os cards */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.card a {
+    background-color: #00b359;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+    background-color: #006f32;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a seção "Sobre o Universo Animal" */
+.about-section {
+    background-color: #e8f5e9; /* Verde claro para contrastar */
+    padding: 40px 20px;
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.about-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    font-size: 1em;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a nova seção "Por Dentro do Site" */
+.inside-site-section {
+    background-color: #e8f5e9;
+    padding: 40px 20px;
+}
+
+.inside-site-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.inside-site-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.inside-site-card {
+    background-color: #d4edda; /* Tom de verde mais claro */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.inside-site-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.inside-site-card p {
+    font-size: 1em;
+}
+
+.inside-site-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.inside-site-card:nth-child(2) {
+    background-color: #a5d6a7; /* Verde médio para o segundo card */
+}
+
+.inside-site-card:nth-child(3) {
+    background-color: #81c784; /* Verde um pouco mais forte para o terceiro card */
+}
+
+footer {
+    background-color: #006f32;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+}
+
+/* Estilização da logo */
+header img {
+    border-radius: 50%; /* Borda arredondada para a imagem */
+    position: absolute; /* Posiciona a logo no canto */
+    top: 20px; /* Ajusta a posição vertical */
+    left: 20px; /* Ajusta a posição horizontal */
+    width: 100px; /* Ajusta o tamanho da logo */
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar a logo */
+}  
+
+   
+
+
+
