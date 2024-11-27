@@ -1,3 +1,4 @@
+/* Estilos para o modo claro (padrão) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,7 +18,6 @@ header {
     position: relative;
 }
 
-/* Logo da página */
 header img {
     border-radius: 50%;
     position: absolute;
@@ -28,7 +28,6 @@ header img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Barra de navegação (abaixo do cabeçalho) */
 nav {
     background-color: #388e3c;
     text-align: center;
@@ -49,25 +48,21 @@ nav ul li {
 nav a {
     color: white;
     text-decoration: none;
-    background-color: #388e3c;
     padding: 8px 12px;
     border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
 nav a:hover {
     background-color: #2e7d32;
 }
 
-/* Container principal com degradê branco para verde escuro */
 main {
     padding: 20px;
-    background: linear-gradient(to bottom, #a2e26a, #003300);
+    background: linear-gradient(to bottom, #a2e26a, #003300); /* Mantém o fundo degradê */
     color: white;
     flex-grow: 1;
 }
 
-/* Título da página */
 main h1 {
     text-align: center;
     font-size: 2.5em;
@@ -76,7 +71,6 @@ main h1 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Container dos animais */
 .animal-container {
     display: flex;
     flex-wrap: wrap;
@@ -84,25 +78,29 @@ main h1 {
     padding: 20px;
 }
 
-/* Estilo de cada cartão de animal */
 .animal {
     width: 250px;
     margin: 20px;
-    background-color: #fff;
-    border: 2px solid #4caf50;
+    background-color: #fff; /* Fundo branco para os quadrados dos animais no modo claro */
+    border: 1px solid #ddd; /* Borda mais clara para os quadrados no modo claro */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
     padding: 10px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.animal:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.animal a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
-/* Imagem do animal */
+.animal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 .animal img {
     width: 100%;
     height: 200px;
@@ -110,20 +108,17 @@ main h1 {
     border-radius: 5px;
 }
 
-/* Título do animal */
 .animal h2 {
     font-size: 1.4em;
-    color: #388e3c;
+    color: #333; /* Títulos dos animais em cor escura no modo claro */
     margin: 10px 0;
 }
 
-/* Descrição do animal */
 .animal p {
     font-size: 1em;
-    color: #555;
+    color: #666; /* Texto mais escuro nos quadrados no modo claro */
 }
 
-/* Rodapé */
 footer {
     background-color: #4caf50;
     color: white;
@@ -134,5 +129,84 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+/* Modo Noturno - para a página inteira */
+body.night-mode {
+    background-color: #121212; /* Fundo escuro para o corpo da página */
+    color: #fff; /* Texto claro para contrastar no fundo escuro */
+}
+
+/* Estilos para cabeçalho, rodapé e menu no modo noturno */
+body.night-mode header {
+    background-color: #333; /* Cabeçalho escuro */
+}
+
+body.night-mode nav {
+    background-color: #333; /* Menu escuro */
+}
+
+body.night-mode footer {
+    background-color: #333; /* Rodapé escuro */
+}
+
+/* Modo Noturno - Apenas para os quadrados dos animais */
+body.night-mode .animal {
+    background-color: #222; /* Fundo escuro para os quadrados dos animais */
+    border: 1px solid #444; /* Borda mais escura para os quadrados */
+}
+
+body.night-mode .animal h2 {
+    color: #fff; /* Títulos dos animais em branco */
+}
+
+body.night-mode .animal p {
+    color: #ccc; /* Texto mais claro nos quadrados */
+}
+
+body.night-mode .animal img {
+    border-radius: 5px;
+    filter: brightness(0.8); /* Reduz o brilho das imagens para o modo escuro */
+}
+
+/* Estilos do botão de alternância */
+.night-mode-btn {
+    font-size: 1.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    z-index: 10;
+}
+
+/* Quando a página estiver no modo escuro, o botão deve ter cor invertida */
+body.night-mode .night-mode-btn {
+    color: #121212; /* Cor para o ícone no modo noturno */
+}
+/* Estilo para o menu de navegação */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #4caf50; /* Fundo verde para os links do menu */
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #388e3c; /* Fundo verde mais escuro quando o item é hover */
+}
+
+
+
+
+
+
+
+
+
+
 
 

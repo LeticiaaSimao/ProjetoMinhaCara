@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorando o Mundo Animal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Imagem de fundo -->
     <div class="background-image"></div>
 
     <header>
         <img src="images/LOGO.png" alt="Logo Universo Animal" width="150" height="auto">
         <h1>Universo Animal</h1>
         <p class="slogan">Descubra a diversidade do reino animal com um clique!</p>
+        
+        <!-- Botão de alternância para modo noturno -->
+        <button id="toggle-night-mode" class="night-mode-btn">
+            🌙
+        </button>
     </header>
     
     <nav>
@@ -29,7 +34,6 @@
     </nav>
 
     <main>
-        <!-- Conteúdo principal da página -->
         <section class="container">
             <div class="card">
                 <h2>Animais Domésticos</h2>
@@ -65,8 +69,7 @@
                 <a href="exoticos.html">Saiba mais</a>
             </div>
         </section>
-
-        <!-- Seção sobre o Site -->
+        
         <section class="about-section">
             <h2>Sobre o Universo Animal</h2>
             <div class="about-cards">
@@ -107,20 +110,33 @@
     <footer>
         <p>&copy; 2024 Explorando o Mundo Animal. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-night-mode');
+
+        // Função para alternar o modo noturno
+        toggleButton.addEventListener('click', function() {
+            document.body.classList.toggle('night-mode');
+
+            // Salvar a preferência do usuário no localStorage
+            if (document.body.classList.contains('night-mode')) {
+                localStorage.setItem('night-mode', 'enabled');
+            } else {
+                localStorage.setItem('night-mode', 'disabled');
+            }
+        });
+
+        // Ao carregar a página, verificar a preferência do usuário no localStorage
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if (localStorage.getItem('night-mode') === 'enabled') {
+                document.body.classList.add('night-mode');
+            } else {
+                document.body.classList.remove('night-mode');
+            }
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

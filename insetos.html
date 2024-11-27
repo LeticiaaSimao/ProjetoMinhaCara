@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +6,18 @@
     <title>Animais Insetos</title>
     <link rel="stylesheet" href="css/insetos.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <img src="images/LOGO.png" alt="Logo Universo Animal" width="150" height="auto">
         <h1>Universo Animal</h1>
         <p class="slogan">Pequenos gigantes: conheça o fascinante mundo dos insetos!</p>
+        
+        <!-- Botão para alternar entre os modos -->
+        <button id="dark-mode-toggle" class="night-mode-btn btn btn-dark" style="position: absolute; top: 20px; right: 20px;">
+            <i class="fas fa-sun"></i> <!-- Ícone para modo claro -->
+        </button>
     </header>
     <nav>
         <ul>
@@ -22,14 +28,11 @@
             <li><a href="marinhos.html">Marinhos</a></li>
             <li><a href="exoticos.html">Exóticos</a></li>
         </ul>
-        </nav>
-    </header>
+    </nav>
 
     <main>
-        <main>
-            <h1 class="titulo-insetos">Insetos</h1>
+        <h1 class="titulo-insetos">Insetos</h1>
         <div class="animal-container">
-    
             <section class="animal">
                 <img src="images/borboleta.jfif" alt="Borboleta">
                 <h2>Borboleta</h2>
@@ -129,7 +132,41 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Animais Insetos. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Explorando o Mundo Animal. Todos os direitos reservados.</p>
     </footer>
+</body>
+</html>
+<script>
+    // Seleciona o botão e o body
+    const nightModeBtn = document.querySelector('.night-mode-btn');
+    const body = document.querySelector('body');
+
+    // Verifica se o usuário tem preferências de modo noturno salvas
+    if (localStorage.getItem('nightMode') === 'true') {
+        body.classList.add('night-mode');
+    }
+
+    // Adiciona ou remove a classe 'night-mode' ao clicar no botão
+    nightModeBtn.addEventListener('click', () => {
+        body.classList.toggle('night-mode');
+        const icon = nightModeBtn.querySelector('i');
+
+        // Altera o ícone dependendo do modo
+        if (body.classList.contains('night-mode')) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon'); // Ícone da lua
+        } else {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun'); // Ícone do sol
+        }
+
+        // Salva a preferência do usuário
+        if (body.classList.contains('night-mode')) {
+            localStorage.setItem('nightMode', 'true');
+        } else {
+            localStorage.setItem('nightMode', 'false');
+        }
+    });
+</script>
 </body>
 </html>

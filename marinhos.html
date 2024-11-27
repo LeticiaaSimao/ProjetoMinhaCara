@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animais Marinhos</title>
-    <link rel="stylesheet" href="css/marinhos.css"> 
+    <!-- Link do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/marinhos.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para o ícone da lua -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
         <img src="images/LOGO.png" alt="Logo Universo Animal" width="150" height="auto">
         <h1>Universo Animal</h1>
         <p class="slogan">Mergulhe no mundo encantador dos oceanos e seus habitantes!</p>
+        <button id="toggle-night-mode" class="night-mode-btn">
+            <i class="fas fa-moon"></i> 
+        </button>
     </header>
+
+    <!-- Navegação -->
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -22,9 +32,9 @@
             <li><a href="insetos.html">Insetos</a></li>
             <li><a href="exoticos.html">Exóticos</a></li>
         </ul>
-        </nav>
-    </header>
+    </nav>
 
+    <!-- Conteúdo Principal -->
     <main>
         <h1>Animais Marinhos</h1>
         <div class="animal-container">
@@ -32,26 +42,26 @@
                 <img src="images/baleia.jfif" alt="Baleia">
                 <h2>Baleia</h2>
                 <p>As baleias são mamíferos marinhos imponentes e inteligentes, conhecidas por sua incrível migração.</p>
-
             </section>
+
             <section class="animal">
                 <img src="images/cavalo marinho.jfif" alt="Cavalo-marinho">
                 <h2>Cavalo-marinho</h2>
                 <p>Os cavalos-marinhos são fascinantes por sua forma única e comportamento especial, sendo conhecidos pela sua habilidade de nadar em posição vertical.</p>
             </section>
 
-        </section>
-        <section class="animal">
-            <img src="images/peixe lua.jfif" alt="Peixe-Lua">
-            <h2>Peixe-Lua</h2>
-            <p>O peixe-lua é um dos maiores peixes ósseos do mundo, conhecido por sua forma peculiar e tamanho impressionante.</p>
-        </section>
+            <section class="animal">
+                <img src="images/peixe lua.jfif" alt="Peixe-Lua">
+                <h2>Peixe-Lua</h2>
+                <p>O peixe-lua é um dos maiores peixes ósseos do mundo, conhecido por sua forma peculiar e tamanho impressionante.</p>
+            </section>
 
             <section class="animal">
                 <img src="images/tubarao branco.jfif" alt="Tubarão Branco">
                 <h2>Tubarão Branco</h2>
                 <p>O tubarão branco é um dos predadores mais temidos dos oceanos, conhecido pela sua força, velocidade e poderosas mandíbulas.</p>
             </section>
+
             <section class="animal">
                 <img src="images/golfinho.jfif" alt="Golfinho">
                 <h2>Golfinho</h2>
@@ -126,8 +136,29 @@
         </div>
     </main>
 
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2024 Animais Marinhos. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Explorando o Mundo Animal. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<script>
+    const toggleButton = document.getElementById('toggle-night-mode');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('night-mode');  // Alterna a classe
+        const icon = toggleButton.querySelector('i');
+        if (body.classList.contains('night-mode')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun'); // Altera o ícone para o sol no modo escuro
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon'); // Retorna para a lua no modo claro
+        }
+    });
+</script>
 </body>
 </html>

@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Nova fonte */
     margin: 0;
     padding: 0;
     color: #333;
@@ -19,6 +21,7 @@ body {
     opacity: 0.7; /* Aplica um efeito de transparência */
     filter: brightness(60%); /* Diminui o brilho da imagem para escurecê-la */
 }
+
 header {
     background-color: #2e7d32; /* Verde mais forte para o fundo do header */
     color: #fff;
@@ -29,6 +32,7 @@ header {
 header h1 {
     font-size: 2.5em;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .slogan {
@@ -58,6 +62,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav ul li a:hover {
@@ -89,6 +94,7 @@ main {
 .card h2 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card p {
@@ -125,6 +131,7 @@ main {
     text-align: center;
     font-size: 2em;
     margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .about-cards {
@@ -147,6 +154,7 @@ main {
 .about-card h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .about-card p {
@@ -168,6 +176,7 @@ main {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .inside-site-cards {
@@ -188,6 +197,7 @@ main {
 .inside-site-card h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .inside-site-card p {
@@ -213,6 +223,7 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 1em;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Estilização da logo */
@@ -224,7 +235,117 @@ header img {
     width: 100px; /* Ajusta o tamanho da logo */
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar a logo */
-}  
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    position: relative;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.odcdn.com.br/wp-content/uploads/2024/03/DALL%C2%B7E-2024-03-28-18.31.42-A-wide-panoramic-image-showcasing-different-animals-spread-across-a-stylized-map-of-the-globe.-In-North-America-a-bald-eagle-soars-above-a-forest.-In.webp');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    opacity: 0.7;
+    filter: brightness(60%);
+}
+
+/* Modo noturno */
+body.night-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.night-mode header, 
+body.night-mode nav, 
+body.night-mode footer {
+    background-color: #1d1d1d;
+}
+
+/* Cards no modo noturno */
+body.night-mode .card, 
+body.night-mode .about-card, 
+body.night-mode .inside-site-card {
+    background-color: #333; 
+    color: #fff;
+}
+
+body.night-mode .card a, 
+body.night-mode .about-card a, 
+body.night-mode .inside-site-card a {
+    background-color: #444;
+    color: #fff;
+}
+
+body.night-mode .card a:hover, 
+body.night-mode .about-card a:hover, 
+body.night-mode .inside-site-card a:hover {
+    background-color: #555;
+}
+
+/* Títulos "Sobre o Universo Animal" e "Por Dentro do Site" */
+.about-section h2, 
+.inside-site-section h2 {
+    color: #000; /* Cor preta no modo normal */
+}
+
+body.night-mode .about-section h2, 
+body.night-mode .inside-site-section h2 {
+    color: #fff; /* Cor branca no modo noturno */
+}
+
+body.night-mode .about-card, 
+body.night-mode .inside-site-card {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Botão de alternância do modo noturno */
+.night-mode-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.night-mode-btn:hover {
+    color: #FFD700;
+}
+
+/* Outros estilos do seu site */
+header {
+    background-color: #2e7d32;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+/* Títulos "Sobre o Universo Animal" e "Por Dentro do Site" */
+.about-section h2, 
+.inside-site-section h2 {
+    color: #000; /* Cor preta no modo claro */
+}
+
+body.night-mode .about-section h2, 
+body.night-mode .inside-site-section h2 {
+    color: #000000; /* Cor branca no modo noturno */
+}
+
+
 
    
 

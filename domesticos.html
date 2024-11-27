@@ -4,14 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animais Domésticos</title>
+    <!-- Link do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/domesticos.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Link do Font Awesome para os ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="images/LOGO.png" alt="Logo Universo Animal" width="150" height="auto">
+        <img src="images/LOGO.png" alt="Logo Universo Animal" class="logo">
         <h1>Universo Animal</h1>
         <p class="slogan">Companheiros para a vida: tudo sobre os animais que amamos!</p>
+        
+        <!-- Botão para alternar entre os modos -->
+        <button id="dark-mode-toggle" class="night-mode-btn btn btn-dark" style="position: absolute; top: 20px; right: 20px;">
+            <i class="fas fa-sun"></i> <!-- Ícone para modo claro -->
+        </button>
     </header>
     <nav>
         <ul>
@@ -22,20 +32,19 @@
             <li><a href="insetos.html">Insetos</a></li>
             <li><a href="exoticos.html">Exóticos</a></li>
         </ul>
-        </nav>
-    </header>
+    </nav>
 
     <main>
         <h1 class="titulo-animais-domesticos">Animais Domésticos</h1>
         <div class="animal-container">
             <section class="animal">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRdsYwnUGgAOullPdtTbWyY1947D9clrbi5g&s" alt="Cachorro">
+                <img src="images/cachorro.jfif" alt="Cachorro">
                 <h2>Cachorro</h2>
                 <p>Os cachorros são conhecidos como os melhores amigos do homem! Eles são leais, amorosos e sempre prontos para brincar.</p>
             </section>
 
             <section class="animal">
-                <img src="https://blog-static.petlove.com.br/wp-content/uploads/2021/09/Gato-ratinho-Petlove.jpg" alt="Gato">
+                <img src="images/gato.jpg" alt="Gato">
                 <h2>Gato</h2>
                 <p>Os gatos são animais independentes e adoráveis, conhecidos por sua personalidade curiosa.</p>
             </section>
@@ -47,45 +56,43 @@
             </section>
 
             <section class="animal">
-                <img src="https://i0.statig.com.br/bancodeimagens/dp/e8/2u/dpe82u6m4513fbt0zzc43h3m7.jpg" alt="Hamster">
+                <img src="images/hamister.jpg" alt="Hamster">
                 <h2>Hamster</h2>
                 <p>Os hamsters são pequenos roedores adoráveis, conhecidos por sua personalidade brincalhona.</p>
             </section>
 
             <section class="animal">
-                <img src="https://s2.glbimg.com/E3-N6wlo4m_WhnYTBcSS98iEfW4=/s.glbimg.com/jo/g1/f/original/2014/09/17/peixe-palhaco.jpg" alt="Peixe">
+                <img src="images/peixe...avif" alt="Peixe">
                 <h2>Peixe</h2>
                 <p>Os peixes são criaturas tranquilas e fascinantes, que trazem beleza e serenidade ao ambiente.</p>
             </section>
 
             <section class="animal">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DqHDsNkQGdMGm-X0QkuyljHoCR3oBYnlyg&s" alt="Periquito">
+                <img src="images/periquito.jpg" alt="Periquito">
                 <h2>Periquito</h2>
                 <p>Os periquitos são pássaros coloridos e sociáveis, conhecidos por sua capacidade de imitar sons.</p>
             </section>
 
             <section class="animal">
-                <img src="https://st2.depositphotos.com/1008660/10184/i/450/depositphotos_101848096-stock-photo-rabbit-in-the-grass.jpg" alt="Coelho">
+                <img src="images/coelho.jpg" alt="Coelho">
                 <h2>Coelho</h2>
                 <p>Os coelhos são adoráveis e fofos, ótimos como animais de estimação, especialmente para crianças.</p>
             </section>
 
             <section class="animal">
-                <img src="https://www.worldanimalprotection.org.br/cdn-cgi/image/fit=cover,width=1280/siteassets/article/tarta4.jpg" alt="Tartaruga">
+                <img src="images/tartaruga.jpg" alt="Tartaruga">
                 <h2>Tartaruga</h2>
                 <p>As tartarugas são animais calmos e longevos, que podem ser ótimos companheiros.</p>
             </section>
 
             <section class="animal">
-                <img src="https://www.petz.com.br/blog/wp-content/uploads/2022/05/porquinho-da-india-pode-comer-milho.jpg" alt="Porquinho da Índia">
+                <img src="images/porquinho.jpg" alt="Porquinho da Índia">
                 <h2>Porquinho da Índia</h2>
                 <p>Os porquinhos-da-índia são pequenos roedores muito sociais e adoráveis.</p>
             </section>
 
-
-
             <section class="animal">
-                <img src="https://quero-ser-veterinario.s3.amazonaws.com/wp-content/uploads/queroserveterinario/destaque-cavalos-de-raca.webp" alt="Cavalo">
+                <img src="images/cavalo.jfif" alt="Cavalo">
                 <h2>Cavalo</h2>
                 <p>Os cavalos são animais majestosos, conhecidos pela sua força e beleza, além de serem ótimos para montaria.</p>
             </section>
@@ -95,40 +102,77 @@
                 <h2>Tico-tico</h2>
                 <p>Os tico-ticos são pássaros pequenos e alegres, adorados por sua melodia e charme.</p>
             </section>
+
             <section class="animal">
-                <img src="https://portalvet.royalcanin.com.br/media/wp-content/uploads/2023/09/gato-persa-02-800x450.jpg" alt="Gato Persa">
+                <img src="images/gato-persa-02-800x450.jpg" alt="Gato Persa">
                 <h2>Gato Persa</h2>
                 <p>Os gatos persas são conhecidos por sua pelagem longa e densa, além de sua personalidade tranquila.</p>
             </section>
 
             <section class="animal">
-                <img src="https://www.petlove.com.br/images/breeds/193221/profile/original/pitbull-p.jpg?1532539293" alt="Pit Bull">
+                <img src="images/pitbull-p.webp" alt="Pit Bull">
                 <h2>Pit Bull</h2>
                 <p>Os pit bulls são cães fortes e leais, conhecidos por sua coragem e proteção.</p>
             </section>
 
             <section class="animal">
-                <img src="https://www.petz.com.br/blog/wp-content/uploads/2017/11/cacatuas-pet-1280x720.jpg" alt="Cacatua">
+                <img src="images/cacatua.jfif" alt="Cacatua">
                 <h2>Cacatua</h2>
                 <p>As cacatuas são aves inteligentes e sociáveis, conhecidas por sua habilidade em aprender truques.</p>
             </section>
 
             <section class="animal">
-                <img src="https://portalvet.royalcanin.com.br/media/wp-content/uploads/2024/04/gato-sphynx.webp" alt="Gato Sphynx">
+                <img src="images/gato-sphynx.webp" alt="Gato Sphynx">
                 <h2>Gato Sphynx</h2>
                 <p>Os gatos Sphynx são conhecidos por sua aparência única e personalidade afetuosa.</p>
             </section>
 
             <section class="animal">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCm35Gfz9ijbZOQdyJ95j1uiUD0i4DFDdyuA&s" alt="Porco Miniatura">
+                <img src="images/porco miniatura.jfif" alt="Porco Miniatura">
                 <h2>Porco Miniatura</h2>
                 <p>Os porcos miniatura são animais inteligentes e brincalhões, que se tornam ótimos companheiros.</p>
             </section>
+
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Animais Domésticos. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Universo Animal. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Link para o Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+<script>
+    // Seleciona o botão e o body
+    const nightModeBtn = document.querySelector('.night-mode-btn');
+    const body = document.querySelector('body');
+
+    // Verifica se o usuário tem preferências de modo noturno salvas
+    if (localStorage.getItem('nightMode') === 'true') {
+        body.classList.add('night-mode');
+    }
+
+    // Adiciona ou remove a classe 'night-mode' ao clicar no botão
+    nightModeBtn.addEventListener('click', () => {
+        body.classList.toggle('night-mode');
+        const icon = nightModeBtn.querySelector('i');
+
+        // Altera o ícone dependendo do modo
+        if (body.classList.contains('night-mode')) {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon'); // Ícone da lua
+        } else {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun'); // Ícone do sol
+        }
+
+        // Salva a preferência do usuário
+        if (body.classList.contains('night-mode')) {
+            localStorage.setItem('nightMode', 'true');
+        } else {
+            localStorage.setItem('nightMode', 'false');
+        }
+    });
+</script>

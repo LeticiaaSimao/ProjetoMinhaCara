@@ -142,3 +142,100 @@ main h1 {
     margin-bottom: 20px;
     font-family: 'Montserrat', sans-serif;
 }
+/* Modo Noturno */
+body.night-mode {
+    background-color: #121212; /* Cor de fundo escura */
+    color: #fff; /* Texto branco */
+}
+
+body.night-mode header {
+    background-color: #333;
+}
+
+body.night-mode nav {
+    background-color: #444;
+}
+
+body.night-mode nav a {
+    color: #fff;
+}
+
+body.night-mode footer {
+    background-color: #333;
+}
+
+body.night-mode h1, body.night-mode h2 {
+    color: #fff;
+}
+
+body.night-mode .animal {
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+body.night-mode .animal p {
+    color: #ccc;
+}
+
+/* Estilo do botão de alternância */
+body.night-mode .night-mode-btn {
+    background-color: #fff;
+    color: #121212;
+    border: 2px solid #121212;
+}
+
+body.night-mode .night-mode-btn:hover {
+    background-color: #ccc;
+}
+/* Estilo do botão de alternância */
+.night-mode-btn {
+    font-size: 1.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    z-index: 10;
+}
+
+/* Estilo do botão de alternância no modo noturno */
+body.night-mode .night-mode-btn {
+    color: #121212; /* Cor para o ícone no modo noturno */
+}
+
+/* Modo Noturno */
+body.night-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.night-mode header {
+    background-color: #333;
+}
+
+body.night-mode nav {
+    background-color: #444;
+}
+
+body.night-mode nav a {
+    color: #fff;
+}
+
+body.night-mode footer {
+    background-color: #333;
+}
+
+body.night-mode h1, body.night-mode h2 {
+    color: #fff;
+}
+
+body.night-mode .animal {
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+body.night-mode .animal p {
+    color: #ccc;
+}
