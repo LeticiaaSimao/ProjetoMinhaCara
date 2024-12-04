@@ -1,20 +1,24 @@
+/* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Cabeçalho com o nome do site */
+/* Cabeçalho */
 header {
     background-color: #4caf50;
     color: white;
     text-align: center;
     padding: 20px 10px;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo da página */
 header img {
     border-radius: 50%;
     position: absolute;
@@ -25,72 +29,184 @@ header img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Navegação */
 nav {
-    background-color: #388e3c; 
+    background-color: #388e3c;
     text-align: center;
     padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+nav li {
+    margin: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    background-color: #388e3c;
     padding: 8px 12px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    background-color: #4caf50;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
     background-color: #2e7d32;
 }
 
-/* Container principal com degradê verde escuro para branco */
+/* Conteúdo principal */
 main {
     padding: 20px;
-    background: linear-gradient(to bottom, #003300, #a2e26a); /* Degradê de verde escuro para branco */
+    background: linear-gradient(to bottom, #a2e26a, #003300);
     color: white;
+    flex-grow: 1;
 }
 
 main h1 {
     text-align: center;
     font-size: 2.5em;
-    color: #ffffff;
+    color: #388e3c;
     margin-bottom: 20px;
-    font-family: 'Georgia', serif; 
 }
-
 
 /* Container dos animais */
 .animal-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
-/* Estilo de cada cartão de animal */
 .animal {
     width: 250px;
-    margin: 20px;
+    height: 350px; /* Altura fixa para uniformizar os cards */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui conteúdo */
+}
+
+.animal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.animal img {
+    width: 100%;
+    height: 150px; /* Altura fixa para padronizar imagens */
+    object-fit: cover; /* Ajusta imagem ao espaço */
+    border-radius: 5px;
+}
+
+.animal h2 {
+    font-size: 1.4em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.animal p {
+    font-size: 1em;
+    color: #666;
+    margin-top: auto; /* Garante alinhamento mesmo com textos variados */
+}
+
+/* Rodapé */
+footer {
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9em;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do modo noturno */
+body.night-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.night-mode header,
+body.night-mode nav,
+body.night-mode footer {
+    background-color: #333;
+}
+
+body.night-mode .animal {
+    background-color: #222;
+    border: 1px solid #444;
+}
+
+body.night-mode .animal h2 {
+    color: #fff;
+}
+
+body.night-mode .animal p {
+    color: #ccc;
+}
+
+body.night-mode .animal img {
+    filter: brightness(0.8);
+}
+
+/* Botão de alternância do modo noturno */
+.night-mode-btn {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    transition: color 0.3s ease;
+}
+
+body.night-mode .night-mode-btn {
+    color: #ffd700;
+}
+.animal-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaçamento entre os cartões */
+}
+
+.animal {
+    flex: 1 1 calc(25% - 20px); /* Ocupa aproximadamente 25% da largura, ajustado com o gap */
+    max-width: calc(25% - 20px); /* Garante que cada cartão não exceda 25% */
+    height: 350px; /* Altura fixa para padronizar */
     background-color: #fff;
     border: 2px solid #4caf50;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
     text-align: center;
+    padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .animal:hover {
@@ -98,202 +214,21 @@ main h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Imagem do animal */
 .animal img {
     width: 100%;
-    height: auto;
+    height: 150px; /* Altura fixa para padronizar as imagens */
+    object-fit: cover; /* Ajusta a imagem ao espaço disponível */
     border-radius: 5px;
 }
 
-/* Título do animal */
 .animal h2 {
     font-size: 1.4em;
     color: #388e3c;
     margin: 10px 0;
 }
 
-/* Descrição do animal */
 .animal p {
     font-size: 1em;
     color: #555;
 }
 
-/* Rodapé */
-footer {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    padding: 15px 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-size: 0.9em;
-}
-
-main h1 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-}
-/* Rodapé */
-footer {
-    background-color: #4caf50;
-    color: white;
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 0.9em;
-    position: relative;  /* Para manter a posição normal */
-    width: 100%;
-    bottom: 0;  /* A posição final dele será na parte inferior */
-}
-
-/* Garantir que o conteúdo principal empurre o rodapé para baixo */
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
-}
-
-main {
-    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
-}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
-main h1 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #388e3c; /* Verde */
-    margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
-}
-/* Barra de navegação (ficará abaixo do cabeçalho) */
-nav {
-    background-color: #388e3c; /* Cor de fundo da barra de navegação */
-    text-align: center;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    background-color: #388e3c;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: #2e7d32;
-}
-/* Modo Noturno */
-body.night-mode {
-    background-color: #121212; /* Cor de fundo escura */
-    color: #fff; /* Texto branco */
-}
-
-body.night-mode header {
-    background-color: #333;
-}
-
-body.night-mode nav {
-    background-color: #444;
-}
-
-body.night-mode nav a {
-    color: #fff;
-}
-
-body.night-mode footer {
-    background-color: #333;
-}
-
-body.night-mode h1, body.night-mode h2 {
-    color: #fff;
-}
-
-body.night-mode .animal {
-    background-color: #222;
-    border: 1px solid #444;
-}
-
-body.night-mode .animal p {
-    color: #ccc;
-}
-
-/* Estilo do botão de alternância */
-body.night-mode .night-mode-btn {
-    background-color: #fff;
-    color: #121212;
-    border: 2px solid #121212;
-}
-
-body.night-mode .night-mode-btn:hover {
-    background-color: #ccc;
-}
-/* Estilo do botão de alternância */
-.night-mode-btn {
-    font-size: 1.5rem;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 20px; /* Ajuste conforme necessário */
-    right: 20px; /* Ajuste conforme necessário */
-    z-index: 10;
-}
-
-/* Estilo do botão de alternância no modo noturno */
-body.night-mode .night-mode-btn {
-    color: #121212; /* Cor para o ícone no modo noturno */
-}
-
-/* Modo Noturno */
-body.night-mode {
-    background-color: #121212;
-    color: #fff;
-}
-
-body.night-mode header {
-    background-color: #333;
-}
-
-body.night-mode nav {
-    background-color: #444;
-}
-
-body.night-mode nav a {
-    color: #fff;
-}
-
-body.night-mode footer {
-    background-color: #333;
-}
-
-body.night-mode h1, body.night-mode h2 {
-    color: #fff;
-}
-
-body.night-mode .animal {
-    background-color: #222;
-    border: 1px solid #444;
-}
-
-body.night-mode .animal p {
-    color: #ccc;
-}

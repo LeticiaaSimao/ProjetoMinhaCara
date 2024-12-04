@@ -137,30 +137,30 @@
 </body>
 </html>
 <script>
-    // Seleciona o botão e o body
+   
     const nightModeBtn = document.querySelector('.night-mode-btn');
     const body = document.querySelector('body');
 
-    // Verifica se o usuário tem preferências de modo noturno salvas
+   
     if (localStorage.getItem('nightMode') === 'true') {
         body.classList.add('night-mode');
     }
 
-    // Adiciona ou remove a classe 'night-mode' ao clicar no botão
+    
     nightModeBtn.addEventListener('click', () => {
         body.classList.toggle('night-mode');
         const icon = nightModeBtn.querySelector('i');
 
-        // Altera o ícone dependendo do modo
+        
         if (body.classList.contains('night-mode')) {
             icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon'); // Ícone da lua
+            icon.classList.add('fa-moon'); 
         } else {
             icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun'); // Ícone do sol
+            icon.classList.add('fa-sun'); 
         }
 
-        // Salva a preferência do usuário
+        
         if (body.classList.contains('night-mode')) {
             localStorage.setItem('nightMode', 'true');
         } else {

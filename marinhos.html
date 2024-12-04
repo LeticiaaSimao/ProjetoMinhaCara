@@ -149,14 +149,14 @@
     const body = document.body;
 
     toggleButton.addEventListener('click', () => {
-        body.classList.toggle('night-mode');  // Alterna a classe
+        body.classList.toggle('night-mode');  
         const icon = toggleButton.querySelector('i');
         if (body.classList.contains('night-mode')) {
             icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun'); // Altera o ícone para o sol no modo escuro
+            icon.classList.add('fa-sun'); 
         } else {
             icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon'); // Retorna para a lua no modo claro
+            icon.classList.add('fa-moon'); 
         }
     });
 </script>

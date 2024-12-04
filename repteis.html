@@ -141,11 +141,10 @@
 </body>
 </html>
 <script>
-    // Função para alternar o modo noturno
+    
     window.addEventListener('DOMContentLoaded', function () {
         const toggleButton = document.getElementById('toggle-night-mode');
-        
-        // Verificar e aplicar o modo noturno conforme a preferência salva
+
         if (localStorage.getItem('night-mode') === 'enabled') {
             document.body.classList.add('night-mode');
         }
@@ -153,7 +152,6 @@
         toggleButton.addEventListener('click', function() {
             document.body.classList.toggle('night-mode');
 
-            // Salvar a preferência do usuário no localStorage
             if (document.body.classList.contains('night-mode')) {
                 localStorage.setItem('night-mode', 'enabled');
             } else {
